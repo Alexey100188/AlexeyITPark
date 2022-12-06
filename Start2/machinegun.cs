@@ -35,24 +35,16 @@ namespace Start2.Weapons
             Console.WriteLine($"Tra-ta-ta! Damage {damage}");
             clip--;
         }
-        public void Shoot2()
-        {
-            Console.WriteLine($"Tra-ta-ta! Damage {damage}");
-            clip--;
-        }
-        public void Shoot3()
-        {
-            Console.WriteLine($"Tra-ta-ta! Damage {damage}");
-            clip--;
-        }
+
 
         public void BurstShoot()
         {
             if (canBurstShooting)
             {
-                Shoot();
-                Shoot2();
-                Shoot3();
+                for (int i = 0; i < 3; i++)
+                {
+                    Shoot();
+                }
             }
             else
                 Shoot();
